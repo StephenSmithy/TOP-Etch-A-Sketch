@@ -45,6 +45,9 @@ button.addEventListener('click', () => {
     if (isNaN(gridSize) || typeof(gridSize) !== 'number') {
         alert('Not a number!')
         return;
+    } else if (gridSize > 100) {
+        alert('Grid size is too large');
+        return;
     }
     clearGrid();
     grid(gridSize);
